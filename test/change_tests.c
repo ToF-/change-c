@@ -3,14 +3,15 @@
 #include "unity_memory.h"
 #include "change.h"
 
-TEST_GROUP(app);
+TEST_GROUP(change);
 
-TEST_SETUP(app) { }
+TEST_SETUP(change) { }
 
-TEST_TEAR_DOWN(app) { }
+TEST_TEAR_DOWN(change) { }
 
-TEST(app, dummy) {
-  int result;
-  result = doit();
-  TEST_ASSERT_EQUAL(42, result);
+TEST(change, trivial_case) {
+    int max_coins = 1;
+    int coins[] = { 5 };
+    int result = solutions(4, max_coins, coins);
+    TEST_ASSERT_EQUAL(0, result);
 }

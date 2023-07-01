@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "change.h"
 
-int doit() {
-    return 42;
+int solutions(int target, int max_coins, int *coins) {
+    return 0;
 }

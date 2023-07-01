@@ -1,2 +1,2 @@
-int doit();
+int solutions(int, int, int *);
 
