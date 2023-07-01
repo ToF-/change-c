@@ -15,3 +15,10 @@ TEST(change, trivial_case) {
     int result = solutions(4, max_coins, coins);
     TEST_ASSERT_EQUAL(0, result);
 }
+
+TEST(change, simple_case) {
+    int max_coins = 1;
+    int coins[] = { 5 };
+    int result = solutions(5, max_coins, coins);
+    TEST_ASSERT_EQUAL(1, result);
+}
