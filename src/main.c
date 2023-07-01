@@ -4,11 +4,6 @@
 
 #define MAX_COINS 100
 
-int cmp_int_desc(const void *va, const void *vb)
-{
-  int a = *(int *)va, b = *(int *) vb;
-  return a < b ? +1 : a > b ? -1 : 0;
-}
 int main(int argc, char *argv[]) {
     int coins[MAX_COINS];
     int max_coins = 0;
@@ -21,10 +16,6 @@ int main(int argc, char *argv[]) {
     for(int i=2; i<argc; i++) {
         coins[max_coins++] = strtol(argv[i], &end, 10);
     }
-    qsort(coins, max_coins, sizeof(int), cmp_int_desc);
-    printf("%d\n", target);
-    for(int i=0; i<max_coins; i++) {
-        printf("%d ", coins[i]);
-    }
+    printf("%d\n", solutions(target, max_coins, coins));
     return 0;
 }
